@@ -1,18 +1,20 @@
+import Link from "next/link";
+
 export default function Home() {
     return (
-        <main className="bg-gray-100 sm:bg-red-100 md:bg-green-100 lg:bg-cyan-100 xl:bg-orange-100 2xl:bg-purple-100 h-screen flex items-center justify-center p-5">
-            <div className="bg-white w-full shadow-lg p-5 rounded-3xl max-w-screen-sm flex flex-col gap-4">
-                <div className="group flex flex-col">
-                    <input
-                        className="bg-gray-100 w-full peer"
-                        placeholder="Write your email"
-                    />
-                    <span className="group-focus-within:block hidden">
-                        Make sure it is a vaild email...
-                    </span>
-                    <button>Submit</button>
+        <div className="flex flex-col items-center justify-between min-h-screen">
+            <div className="my-auto flex flex-col items-center *:font-medium">
+                <span className="text-9xl">🥕</span>
+                <h1>당근</h1>
+                <h2>당근 마켓에 어서오세요!</h2>
+            </div>
+            <div>
+                <Link href="/create-account">시작하기</Link>
+                <div>
+                    <span>이미 계정이 있나요?</span>
+                    <Link href="/login">로그인</Link>
                 </div>
             </div>
-        </main>
+        </div>
     );
 }
