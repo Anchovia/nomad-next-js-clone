@@ -59,6 +59,6 @@ export async function handleCreateAccount(prevState: any, formData: FormData) {
     if (!result.success) {
         return result.error.flatten();
     } else {
-        console.log(result.data);
+        
     }
 }
